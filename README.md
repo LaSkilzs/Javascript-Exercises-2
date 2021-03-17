@@ -1,5 +1,7 @@
 # Javascript Part 2 --> DOM Manipulation
 
+### Below you will find a list of exercises for the students to complete during Javascript Part 2. These exercises are focused on having the students create functions to manipulate the DOM and prepare for their final project.
+
 
 #### Carousel -- (Advanced)
 1. A scrolling carousel (automatically cycle through images)
