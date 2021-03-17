@@ -4,18 +4,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+    <title>FormInput</title>
 </head>
 <body>
     <form>
-        <label><b>Enter a Message</b></label>
+      <div class="spacing">
+        <label<b>Enter a Message</b></label>
         <input type="text" name="message" id="user_input">
-      </form>
-    
-      <input type="submit" onclick="showInput();"><br/>
+      </div>
+    </form>
+    <div class="spacing">
+        <input type="submit" class="button" onclick="showInput();"><br/>
+    </div>
+    <div class="spacing userInput"> 
       <label>Your input: </label>
-      <p><span id='display'></span></p>
-
+     <strong><span id="display"></span></strong>
+    </div>
       <script>
           function showInput() {
             document.getElementById('display').innerHTML = document.getElementById("user_input").value;

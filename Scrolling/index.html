@@ -1,30 +1,35 @@
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-.test {
-  background-color: yellow;
-}
-</style>
+  <style>
+    .javascript {
+      background-color: yellow;
+    }
+  </style>
+  <title>Scrolling</title>
 </head>
 <body style="height:1500px">
 
-<p>Scroll down this page</p>
+  <p>Scroll down this page</p>
 
-<p id="myP" style="position:fixed">When you have scrolled 50 pixels from the top of this page, add the class "test" (yellow background color) to this paragraph. Scroll up again to remove the class.
-</p>
+  <p id="scrollPosition" style="position:fixed">
+    When you have scrolled 50 pixels from the top of this page, add the class "javaScript" 
+    (yellow background color) to this paragraph. Scroll up again to remove the class.
+  </p>
 
-<script>
-window.onscroll = function() {myFunction()};
+  <script>
+    // call function when user scrolls
+    window.onscroll = () => highLightText();
 
-function myFunction() {
-  if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-    document.getElementById("myP").className = "test";
-  } else {
-    document.getElementById("myP").className = "";
-  }
-}
-</script>
+    // Create function to do something when user scrolls
+    function highLightText() {
+      if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+        document.getElementById("scrollPosition").className = "javaScript";
+      } else {
+        document.getElementById("scrollPosition").className = "";
+      }
+    }
+  </script>
 
 </body>
 </html>
