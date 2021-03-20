@@ -11,21 +11,23 @@
         <form>
             <div class="spacing">
                 <label><strong>Enter a Message</strong></label>
-                <input type="text" name="message" id="user_input" />
+                <input type="text" name="message" id="user-input" />
             </div>
         </form>
         <div class="spacing">
-            <input type="submit" class="button" onclick="showInput();" /><br />
+            <button type="submit" class="button" onclick="showInput();">
+                Submit</button
+            ><br />
         </div>
-        <div class="spacing userInput">
+        <div class="spacing user-input">
             <label>Your input: </label>
             <strong><span id="display"></span></strong>
         </div>
         <script>
+            let display = document.getElementById("display");
+            let input = document.getElementById("user-input");
             function showInput() {
-                document.getElementById(
-                    "display"
-                ).innerHTML = document.getElementById("user_input").value;
+                display.textContent = input.value;
             }
         </script>
     </body>

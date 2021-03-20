@@ -1,5 +1,5 @@
 * {
-    background-color: hsl(122, 40%, 49%);
+    background-color: hsl(122, 40%, 19%);
     color: #cccccc;
     font-size: 1em;
 }
@@ -19,7 +19,7 @@ input[type="text"] {
     justify-content: center;
     padding: 20px;
 }
-.userInput {
+.user-input {
     display: flex;
     padding: 5px;
 }
