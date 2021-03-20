@@ -1,19 +1,13 @@
-// Create a new Alert
-let Alert = new CustomAlert();
+let popUpBox = document.getElementById("popUpBox");
+let popUpOverlay = document.getElementById("popUpOverlay");
 
-// create functions for Alert
-function CustomAlert() {
-    // function to show modal
-    this.open = function () {
-        let popUpBox = document.getElementById("popUpBox");
-        popUpBox.style.display = "block";
-        document.getElementById("closeModal").innerHTML =
-            '<button onclick="Alert.close()">OK</button>';
-    };
+function openModal() {
+    popUpBox.style.display = "block";
+    document.getElementById("closeModal").innerHTML =
+        '<button onclick="closeModal()">OK</button>';
+}
 
-    // function to close modal
-    this.close = function () {
-        document.getElementById("popUpBox").style.display = "none";
-        document.getElementById("popUpOverlay").style.display = "none";
-    };
+function closeModal() {
+    popUpBox.style.display = "none";
+    popUpOverlay.style.display = "none";
 }
