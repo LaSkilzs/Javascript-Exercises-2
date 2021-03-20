@@ -7,30 +7,40 @@
             }
         </style>
         <title>Scrolling</title>
+        <style>
+            body {
+                height: 1500px;
+            }
+            .goal-paragraph {
+                position: fixed;
+            }
+        </style>
     </head>
-    <body style="height: 1500px">
+    <body>
         <p>Scroll down this page</p>
 
-        <p id="scrollPosition" style="position: fixed">
+        <p id="goal-paragraph" class="goal-paragraph">
             When you have scrolled 50 pixels from the top of this page, add the
             class "javaScript" (yellow background color) to this paragraph.
             Scroll up again to remove the class.
         </p>
 
         <script>
-            // call function when user scrolls
-            window.onscroll = () => highLightText();
+            // find the DOM element which we will be modifying
+            let goalParagraph = document.getElementById("goal-paragraph");
 
-            // Create function to do something when user scrolls
+            // set which function to call when user scrolls
+            window.onscroll = highLightText;
+
+            // function which applies a CSS class depending on scroll distance
             function highLightText() {
                 if (
                     document.body.scrollTop > 50 ||
                     document.documentElement.scrollTop > 50
                 ) {
-                    document.getElementById("scrollPosition").className =
-                        "javascript";
+                    goalParagraph.classList.add("javascript");
                 } else {
-                    document.getElementById("scrollPosition").className = "";
+                    goalParagraph.classList.remove("javascript");
                 }
             }
         </script>
