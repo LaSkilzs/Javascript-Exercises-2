@@ -1,8 +1,18 @@
+/* Global Styling */
+html {
+    box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
 /* Carousel Styling */
 
-.carouselContainer {
-    width: 60%;
-    height: 60%;
+.carousel-container {
+    width: 600px;
+    height: 400px;
     margin: 0 auto;
     position: relative;
     background-color: #fff;
@@ -10,7 +20,7 @@
     overflow: hidden;
 }
 
-.carousel {
+.carousel-item {
     width: 100%;
     height: 100%;
     padding: 20px;
