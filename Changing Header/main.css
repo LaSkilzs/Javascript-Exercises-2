@@ -1,40 +1,39 @@
-
-:root{
+:root {
     grey: #f5f5f5;
     lightblue: #2b98f0;
-  }
-  
-  *{
-    padding:0;
+}
+
+* {
+    padding: 0;
     margin: 0;
     box-string: border-box;
-  }
-  /*  Header */
-  
-  body {
-    font-family: 'Roboto Mono', monospace;
+}
+/*  Header */
+
+body {
+    font-family: "Roboto Mono", monospace;
     background: #f5f5f5;
-  }
-  
-   #header{
+}
+
+#header {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-  }
-  
-  nav{
+}
+
+nav {
     flex: 0 0 auto;
-  }
-  
-  #banner{
+}
+
+#banner {
     flex: 1 0 auto;
-  }
-  
-  nav ul{
+}
+
+nav ul {
     list-style-type: none;
-  }
-  
-  nav ul a{
+}
+
+nav ul a {
     display: block;
     color: #2b98f0;
     background: transparent;
@@ -42,116 +41,115 @@
     padding: 10px;
     font-size: 20px;
     transition: color 1s ease, background 1s ease, padding 1s ease;
-  }
-  
-  nav ul li a:hover{
+}
+
+nav ul li a:hover {
     color: #f5f5f5;
     padding-left: 60px;
     background: #2b98f0;
-  
-  }
-  
-  #nav-top{
+}
+
+#nav-top {
     display: flex;
     justify-content: space-between;
-    padding:20px 20px 20px 10px;
-  }
-  
-  #nav-top h3{
-    font-size:  30px;
+    padding: 20px 20px 20px 10px;
+}
+
+#nav-top h3 {
+    font-size: 30px;
     padding: 5px;
     color: #2b98f0;
     border: 3px solid;
     transition: color 2s ease, background 2s ease;
-  }
-  
-  #nav-top h3:hover{
+}
+
+#nav-top h3:hover {
     background: #2b98f0;
     color: #f5f5f5;
-  }
-  
-  
-  #menu-btn{
-    padding:5px;
-    border:2px solid #2b98f0;
+}
+
+#menu-btn {
+    padding: 5px;
+    border: 2px solid #2b98f0;
     cursor: pointer;
     align-self: center;
-  }
-  
-  .bar,
-  .bar2,
-  .bar3 {
+}
+
+.bar,
+.bar2,
+.bar3 {
     height: 5px;
     width: 35px;
     background-color: #2b98f0;
     margin: 5px 0;
     transition: transform 1s ease;
-  }
-  
-  .turn .bar{
+}
+
+.turn .bar {
     transform: rotate(-45deg) translate(-7px, 6px);
-  }
-  
-  .turn .bar2{
+}
+
+.turn .bar2 {
     opacity: 0;
-  }
-  
-  .turn .bar3{
+}
+
+.turn .bar3 {
     transform: rotate(45deg) translate(-7px, -8px);
-  }
-  
-  @media screen and (min-width:690px){
+}
+
+@media screen and (min-width: 690px) {
     nav {
-      display: flex;
-      align-items: baseline;
-      flex-wrap: wrap;
-      padding: 0 20px;
+        display: flex;
+        align-items: baseline;
+        flex-wrap: wrap;
+        padding: 0 20px;
     }
-  
+
     #menu-btn {
-      display: none;
+        display: none;
     }
-  
-    nav ul{
-      flex: 1 1 auto;
-      display: flex!important;
-      flex-wrap: wrap;
+
+    nav ul {
+        flex: 1 1 auto;
+        display: flex !important;
+        flex-wrap: wrap;
     }
-  
-    nav ul li{
-      flex: 1 0 125px;
+
+    nav ul li {
+        flex: 1 0 125px;
     }
-  
-     nav ul .icon {
-      flex: 0 0 20px;
+
+    nav ul .icon {
+        flex: 0 0 20px;
     }
-  
-    nav ul li .link-icon{
-      color: #f5f5f5;
-      background:#395e7e;
+
+    nav ul li .link-icon {
+        color: #f5f5f5;
+        background: #395e7e;
     }
-    nav ul li .link-icon:hover{
-      color: #f5f5f5;
-      background: #008dff;
+    nav ul li .link-icon:hover {
+        color: #f5f5f5;
+        background: #008dff;
     }
-  
-    nav ul a{
-      text-align: center;
+
+    nav ul a {
+        text-align: center;
     }
-  
+
     nav ul a:hover {
-      padding:10px!important;
+        padding: 10px !important;
     }
-  
-    #nav-top{
-      padding:10px
+
+    #nav-top {
+        padding: 10px;
     }
-  }
-  
-  /*  Banner  */
-  
-  #banner{
-    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(images/banner-img.jpeg);
+}
+
+/*  Banner  */
+
+#banner {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+        url(images/banner-img.jpeg);
     background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
@@ -159,31 +157,31 @@
     display: flex;
     align-items: center;
     justify-content: center;
-  }
-  
-  #banner-box{
+}
+
+#banner-box {
     color: #f5f5f5;
     text-align: center;
-  }
-  
-  #banner-title{
+}
+
+#banner-title {
     text-transform: capitalize;
     font-size: 60px;
-  }
-  
-  .banner-underline{
+}
+
+.banner-underline {
     width: 200px;
     margin: 10px auto;
     border: 3px solid #2b98f0;
-  }
-  
-  .banner-subtitle{
+}
+
+.banner-subtitle {
     margin: 20px 0 40px 0;
     text-transform: capitalize;
     font-size: 25px;
-  }
-  
-  #banner-box a {
+}
+
+#banner-box a {
     display: inline-block;
     padding: 10px;
     font-size: 40px;
@@ -192,11 +190,10 @@
     background: #2b98f0;
     border: 3px solid #2b98f0;
     transition: background 3s ease, border 0.5s ease;
-  }
-  
-  #banner-box a:hover{
+}
+
+#banner-box a:hover {
     background: transparent;
     border: 3px solid #f5f5f5;
-  }
-  /* end of navbar section */
-  
+}
+/* end of navbar section */

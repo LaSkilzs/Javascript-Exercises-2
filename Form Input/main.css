@@ -1,29 +1,29 @@
-*{
-    background-color: hsl(122, 40%, 49%);
-    color:#cccccc;
+* {
+    background-color: hsl(122, 40%, 19%);
+    color: #cccccc;
     font-size: 1em;
-  }
-  .button {
+}
+.button {
     background-color: white;
     color: black;
     border: 2px solid hsl(122, 40%, 49%); /* Green */
     width: 100px;
-    }
-    input[type=text] {
+}
+input[type="text"] {
     padding: 5px;
     border: 2px solid #cccccc;
     border-radius: 5px;
-  }
-  .spacing{
+}
+.spacing {
     display: flex;
-    justify-content: center; 
-    padding: 20px; 
-  }
-  .userInput{
+    justify-content: center;
+    padding: 20px;
+}
+.user-input {
     display: flex;
     padding: 5px;
-  }
-  #display{
-    margin-left:3px;
+}
+#display {
+    margin-left: 3px;
     font-size: 2em;
-  }
+}
