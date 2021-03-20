@@ -1,56 +1,99 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="main.css">
-</head>
-<body>
-    <div class="tab">
-        <button class="demo" onclick="infofunc(event, 'short')">Short Section</button>
-        <button class="demo" onclick="infofunc(event, 'medium')">Medium Section</button>
-        <button class="demo" onclick="infofunc(event, 'long')">Long Section</button>
-    </div>
-    
-    <div id="short" class="demo2">
-        <h3>Short Section</h3>
-        <p>Praesent nonummy mi in odio. Nullam accumsan lorem in dui. Vestibulum turpis sem, aliquet eget, lobortis pellentesque, rutrum eu, nisl. Nullam accumsan lorem in dui. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.</p>
-    </div>
-    
-    <div id="medium" class="demo2">
-        <h3>Medium Section</h3>
-        <p>Praesent nonummy mi in odio. Nullam accumsan lorem in dui. Vestibulum turpis sem, aliquet eget, lobortis pellentesque, rutrum eu, nisl. Nullam accumsan lorem in dui. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.</p>
-  
-        <p>In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Morbi mattis ullamcorper velit. Pellentesque posuere. Etiam ut purus mattis mauris sodales aliquam. Praesent nec nisl a purus blandit viverra.</p>
-    </div>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="main.css" />
+        <title>Tabbed Content Demo</title>
+    </head>
+    <body>
+        <div class="tab">
+            <button class="demo" onclick="infofunc(event, 'short')">
+                Short Section
+            </button>
+            <button class="demo" onclick="infofunc(event, 'medium')">
+                Medium Section
+            </button>
+            <button class="demo" onclick="infofunc(event, 'long')">
+                Long Section
+            </button>
+        </div>
 
-    <div id="long" class="demo2">
-        <h3>Long Section</h3>
-        <p>Praesent nonummy mi in odio. Nullam accumsan lorem in dui. Vestibulum turpis sem, aliquet eget, lobortis pellentesque, rutrum eu, nisl. Nullam accumsan lorem in dui. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.</p>
+        <div id="short" class="demo2">
+            <h3>Short Section</h3>
+            <p>
+                Praesent nonummy mi in odio. Nullam accumsan lorem in dui.
+                Vestibulum turpis sem, aliquet eget, lobortis pellentesque,
+                rutrum eu, nisl. Nullam accumsan lorem in dui. Donec pede justo,
+                fringilla vel, aliquet nec, vulputate eget, arcu.
+            </p>
+        </div>
 
-        <p>In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Morbi mattis ullamcorper velit. Pellentesque posuere. Etiam ut purus mattis mauris sodales aliquam. Praesent nec nisl a purus blandit viverra.</p>
+        <div id="medium" class="demo2">
+            <h3>Medium Section</h3>
+            <p>
+                Praesent nonummy mi in odio. Nullam accumsan lorem in dui.
+                Vestibulum turpis sem, aliquet eget, lobortis pellentesque,
+                rutrum eu, nisl. Nullam accumsan lorem in dui. Donec pede justo,
+                fringilla vel, aliquet nec, vulputate eget, arcu.
+            </p>
 
-        <p>Praesent nonummy mi in odio. Nullam accumsan lorem in dui. Vestibulum turpis sem, aliquet eget, lobortis pellentesque, rutrum eu, nisl. Nullam accumsan lorem in dui. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.</p>
+            <p>
+                In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.
+                Morbi mattis ullamcorper velit. Pellentesque posuere. Etiam ut
+                purus mattis mauris sodales aliquam. Praesent nec nisl a purus
+                blandit viverra.
+            </p>
+        </div>
 
-        <p>In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Morbi mattis ullamcorper velit. Pellentesque posuere. Etiam ut purus mattis mauris sodales aliquam. Praesent nec nisl a purus blandit viverra.</p>
-    </div>
-<script>
+        <div id="long" class="demo2">
+            <h3>Long Section</h3>
+            <p>
+                Praesent nonummy mi in odio. Nullam accumsan lorem in dui.
+                Vestibulum turpis sem, aliquet eget, lobortis pellentesque,
+                rutrum eu, nisl. Nullam accumsan lorem in dui. Donec pede justo,
+                fringilla vel, aliquet nec, vulputate eget, arcu.
+            </p>
 
-    // Create Function to switch tabs based on user request
-    function infofunc(e, info) {
-        var i, content, links;
-        content = document.getElementsByClassName("demo2");
-    
-        for (i = 0; i < content.length; i++) {
-            content[i].style.display = "none";
-        }
-        links = document.getElementsByClassName("demo");
-        for (i = 0; i < links.length; i++) {
-            links[i].className = links[i].className.replace(" active", "");
-        }
-        document.getElementById(info).style.display = "block";
-        e.currentTarget.className += " active";
-    }
-    
-</script>
-</body>
+            <p>
+                In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.
+                Morbi mattis ullamcorper velit. Pellentesque posuere. Etiam ut
+                purus mattis mauris sodales aliquam. Praesent nec nisl a purus
+                blandit viverra.
+            </p>
+
+            <p>
+                Praesent nonummy mi in odio. Nullam accumsan lorem in dui.
+                Vestibulum turpis sem, aliquet eget, lobortis pellentesque,
+                rutrum eu, nisl. Nullam accumsan lorem in dui. Donec pede justo,
+                fringilla vel, aliquet nec, vulputate eget, arcu.
+            </p>
+
+            <p>
+                In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.
+                Morbi mattis ullamcorper velit. Pellentesque posuere. Etiam ut
+                purus mattis mauris sodales aliquam. Praesent nec nisl a purus
+                blandit viverra.
+            </p>
+        </div>
+        <script>
+            // Create Function to switch tabs based on user request
+            function infofunc(e, info) {
+                var i, content, links;
+                content = document.getElementsByClassName("demo2");
+
+                for (i = 0; i < content.length; i++) {
+                    content[i].style.display = "none";
+                }
+                links = document.getElementsByClassName("demo");
+                for (i = 0; i < links.length; i++) {
+                    links[i].className = links[i].className.replace(
+                        " active",
+                        ""
+                    );
+                }
+                document.getElementById(info).style.display = "block";
+                e.currentTarget.className += " active";
+            }
+        </script>
+    </body>
 </html>

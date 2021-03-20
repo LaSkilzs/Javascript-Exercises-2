@@ -1,35 +1,38 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <style>
-    .javascript {
-      background-color: yellow;
-    }
-  </style>
-  <title>Scrolling</title>
-</head>
-<body style="height:1500px">
+<html lang="en">
+    <head>
+        <style>
+            .javascript {
+                background-color: yellow;
+            }
+        </style>
+        <title>Scrolling</title>
+    </head>
+    <body style="height: 1500px">
+        <p>Scroll down this page</p>
 
-  <p>Scroll down this page</p>
+        <p id="scrollPosition" style="position: fixed">
+            When you have scrolled 50 pixels from the top of this page, add the
+            class "javaScript" (yellow background color) to this paragraph.
+            Scroll up again to remove the class.
+        </p>
 
-  <p id="scrollPosition" style="position:fixed">
-    When you have scrolled 50 pixels from the top of this page, add the class "javaScript" 
-    (yellow background color) to this paragraph. Scroll up again to remove the class.
-  </p>
+        <script>
+            // call function when user scrolls
+            window.onscroll = () => highLightText();
 
-  <script>
-    // call function when user scrolls
-    window.onscroll = () => highLightText();
-
-    // Create function to do something when user scrolls
-    function highLightText() {
-      if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-        document.getElementById("scrollPosition").className = "javascript";
-      } else {
-        document.getElementById("scrollPosition").className = "";
-      }
-    }
-  </script>
-
-</body>
+            // Create function to do something when user scrolls
+            function highLightText() {
+                if (
+                    document.body.scrollTop > 50 ||
+                    document.documentElement.scrollTop > 50
+                ) {
+                    document.getElementById("scrollPosition").className =
+                        "javascript";
+                } else {
+                    document.getElementById("scrollPosition").className = "";
+                }
+            }
+        </script>
+    </body>
 </html>
