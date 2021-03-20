@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="main.css" />
+        <title>FormInput</title>
+    </head>
+    <body>
+        <form>
+            <div class="spacing">
+                <label><strong>Enter a Message</strong></label>
+                <input type="text" name="message" id="user-input" />
+            </div>
+        </form>
+        <div class="spacing">
+            <button type="submit" class="button" onclick="showInput();">
+                Submit</button
+            ><br />
+        </div>
+        <div class="spacing user-input">
+            <label>Your input: </label>
+            <strong><span id="display"></span></strong>
+        </div>
+        <script>
+            let display = document.getElementById("display");
+            let input = document.getElementById("user-input");
+
+            // Create function that displays input text value
+          
+        </script>
+    </body>
+</html>
