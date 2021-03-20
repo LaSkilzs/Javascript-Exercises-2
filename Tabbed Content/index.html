@@ -6,19 +6,19 @@
         <title>Tabbed Content Demo</title>
     </head>
     <body>
-        <div class="tab">
-            <button class="demo" onclick="infofunc(event, 'short')">
+        <div class="tabs">
+            <button class="tab-btn" onclick="infofunc(event, 'short')">
                 Short Section
             </button>
-            <button class="demo" onclick="infofunc(event, 'medium')">
+            <button class="tab-btn" onclick="infofunc(event, 'medium')">
                 Medium Section
             </button>
-            <button class="demo" onclick="infofunc(event, 'long')">
+            <button class="tab-btn" onclick="infofunc(event, 'long')">
                 Long Section
             </button>
         </div>
 
-        <div id="short" class="demo2">
+        <div id="short" class="tab-content">
             <h3>Short Section</h3>
             <p>
                 Praesent nonummy mi in odio. Nullam accumsan lorem in dui.
@@ -28,7 +28,7 @@
             </p>
         </div>
 
-        <div id="medium" class="demo2">
+        <div id="medium" class="tab-content">
             <h3>Medium Section</h3>
             <p>
                 Praesent nonummy mi in odio. Nullam accumsan lorem in dui.
@@ -45,7 +45,7 @@
             </p>
         </div>
 
-        <div id="long" class="demo2">
+        <div id="long" class="tab-content">
             <h3>Long Section</h3>
             <p>
                 Praesent nonummy mi in odio. Nullam accumsan lorem in dui.
@@ -76,23 +76,26 @@
             </p>
         </div>
         <script>
-            // Create Function to switch tabs based on user request
-            function infofunc(e, info) {
-                var i, content, links;
-                content = document.getElementsByClassName("demo2");
+            // Find DOM elements which will already exist (and not be removed)
+            let contents = document.getElementsByClassName("tab-content");
+            let tabButtons = document.getElementsByClassName("tab-btn");
 
-                for (i = 0; i < content.length; i++) {
-                    content[i].style.display = "none";
+            // function to switch tabs based on user request
+            function infofunc(event, info) {
+                // hide all of the tab contents
+                for (let i = 0; i < contents.length; i++) {
+                    contents[i].style.display = "none";
                 }
-                links = document.getElementsByClassName("demo");
-                for (i = 0; i < links.length; i++) {
-                    links[i].className = links[i].className.replace(
-                        " active",
-                        ""
-                    );
+                // remove `active` styling from all buttons
+                for (let i = 0; i < tabButtons.length; i++) {
+                    tabButtons[i].classList.remove("active");
                 }
-                document.getElementById(info).style.display = "block";
-                e.currentTarget.className += " active";
+                // add `active` class to clicked tab button
+                event.currentTarget.classList.add("active");
+                // find selected tsb content
+                let selectedContent = document.getElementById(info);
+                // show selected tab content
+                selectedContent.style.display = "block";
             }
         </script>
     </body>

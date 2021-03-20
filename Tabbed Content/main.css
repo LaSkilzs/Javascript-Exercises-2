@@ -1,24 +1,24 @@
-.tab {
+.tabs {
     overflow: hidden;
     /*
     border: 2px solid gray;
     background-color: #FFE4C4;
     */
 }
-.tab button {
+.tabs button {
     background-color: inherit;
     float: left;
     cursor: pointer;
     padding: 14px 16px;
     font-size: 15px;
 }
-.tab button:hover {
+.tabs button:hover {
     background-color: gray;
 }
-.tab button.active {
+.tabs button.active {
     background-color: #ccc;
 }
-.demo2 {
+.tab-content {
     display: none;
     padding: 3px 12px;
 }
